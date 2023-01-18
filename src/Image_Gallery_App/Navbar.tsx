@@ -1,16 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
       <div className="container-fluid">
         <div>
-        
-            <a className="navbar-brand" href="dfgdf">
-           
-              <span className="fs-2 ms-3 fw-bold">Image Gallery App</span>
-            </a>
-         
+          <a className="navbar-brand" href="dfgdf">
+            <span className="fs-2 ms-3 fw-bold">Image Gallery App</span>
+          </a>
         </div>
         <button
           className="navbar-toggler"
@@ -23,53 +20,10 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse grow" id="navbarNav">
-          {/* <ul className="navbar-nav fs-5 align-items-center">
-
-
-           
-        
-                <a className="nav-link active" href="sd">
-                  <span className="fontsm fw-bold">Add Post</span>
-                </a>
-        
-          
-              <p></p>
-           
-            <li className="nav-item me-5">
-     
-                <a className="nav-link active" href="sd">
-                  <span className="fontsm fw-bold ">Sign Up</span>
-                </a>
-              
-            </li>
-
-        
-              <li className="nav-item me-5">
-             
-                  <a className="nav-link active" href="sd">
-                    <span className="fontsm fw-bold ">Sign In</span>
-                  </a>
-         
-              </li>
-         
-              <li className="nav-item ">
-              
-                  <a className="nav-link active" href="sd">
-                    <span className="fontsm fw-bold ">
-                      Log Out
-                    </span>
-                  </a>
-                
-              </li>
-            
-
-            <li className="nav-item me-5"></li>
-          </ul> */}
-        </div>
+        <div className="collapse navbar-collapse grow" id="navbarNav"></div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

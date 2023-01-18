@@ -4,31 +4,30 @@ import { addComment, Dislike, fetchedGalleryData, Like } from "../Redux_toolkit/
 import { storeProps } from "../typreprops";
 
 const Gallery = () => {
-
   const useAppSelector: TypedUseSelectorHook<storeProps> = useSelector;
   const store = useAppSelector((store) => store);
   const dispatch=useDispatch();
   const inpRef=useRef<HTMLInputElement[]>([]);
-  console.log(store);
-  
-  useEffect(() => {
-    
+  // render data first time
+  useEffect(() => { 
     dispatch<any>(fetchedGalleryData());
   }, []);
+  //store in local storage in first time
   useEffect(()=>{
     localStorage.setItem('posts',JSON.stringify(store.imageGalleryReducer.posts))
   },[store])
-
+// for add comments
   const addCommentUser = (i:number) => {
-  
     if ( inpRef.current!==null ) {
       dispatch(addComment({ ind: i, comment: inpRef.current[i].value}));
       inpRef.current[i].value=" ";
     }
   };
+  // for like
   const like=(i:number)=>{
     dispatch(Like(i));
   }
+  // for dislike
   const dislike=(i:number)=>{
     
     dispatch<any>(Dislike(i));

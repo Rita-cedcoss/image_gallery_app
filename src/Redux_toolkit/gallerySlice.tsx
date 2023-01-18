@@ -1,13 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { imgGalleryReducerProps } from "../typreprops";
-
 const initialState:imgGalleryReducerProps = {
   posts:[],
   loading:false,
   error:{}
 };
-
+// fetch data
 export const fetchedGalleryData = createAsyncThunk("images/fetchedGalleryData", async () => {
   let res;
   try{
@@ -36,7 +35,7 @@ export const fetchedGalleryData = createAsyncThunk("images/fetchedGalleryData", 
   return temp
 }
 });
-
+// reducer slice
 export const imgGallerySlice = createSlice({
   name: "images",
   initialState,
